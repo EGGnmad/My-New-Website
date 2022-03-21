@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 300vh;
+}
+
+.container-1{
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+.container-1::before{
+    content: "";
+    position: absolute;
+    top: 55vh;
+    left: 105%;
+    background-color: white;
+
+    width: 80px;
+    height: 80px;
+
+    transform: translateX(-50%)  perspective(1em) rotateX(65deg);
+    filter: blur(3em);
+}
+
+/* macintosh */
+
+.macintosh {
+    width: 200px;
+    height: 280px;
+    background: linear-gradient(
+        90deg,
+        rgb(238, 226, 204),
+        rgba(207, 190, 159, 0.781)
+    );
+
+    /* border: 3px solid black; */
+    border-radius: 6px;
+
+    box-shadow: inset rgba(255, 255, 255, 0.596) 50px 50px 40px -70px,
+        inset rgba(129, 115, 85, 0.486) -50px -60px 40px -40px;
+        /* rgba(255, 255, 255, 0.719) 0px 0px 200px -70px; */
+    
+    position: absolute;
+    top: 33vh;
+    left: 50%;
+    transform: translateX(-50%) scale(1.2);
+}
+
+.macintosh::before {
+    content: "";
+
+    width: 165px;
+    height: 135px;
+
+    border-radius: 3px;
+
+    position: absolute;
+    top: 22.5px;
+    left: 17.5px;
+
+    box-shadow: inset rgb(129, 115, 85) 0px 50px 40px -15px,
+        inset rgba(255, 255, 255, 0.438) 0px -60px 40px -20px;
+
+    z-index: 2;
+}
+
+.macintosh div:nth-child(1) {
+    width: 150px;
+    height: 120px;
+
+    border-radius: 10px;
+
+    position: absolute;
+    top: 30px;
+    left: 25px;
+
+    background-color: black;
+
+    z-index: 3;
+}
+
+.macintosh div:nth-child(1) section {
+
+    font-size: 13px;
+    color: rgb(1, 255, 1);
+
+    z-index: 4;
+
+    padding: 5px 5px;
+
+}
+
+.macintosh div:nth-child(2) {
+    width: 80px;
+    height: 5px;
+
+    position: absolute;
+    top: 210px;
+    left: 100px;
+
+    border-radius: 3px;
+
+    background: linear-gradient(90deg, #000000ab, rgb(0, 0, 0), #000000ab);
+
+    z-index: 2;
+}
+
+.macintosh::after {
+    content: "";
+
+    width: 185px;
+    height: 250px;
+
+    border-radius: 6px;
+
+    position: absolute;
+    top: 7.5px;
+    left: 7.5px;
+
+    background: linear-gradient(
+        120deg,
+        rgb(238, 226, 204),
+        rgba(207, 190, 159, 0.781)
+    );
+}
+
+
+@keyframes underline {
+    to{
+        border-bottom: 3px solid white;
+    }
+}
